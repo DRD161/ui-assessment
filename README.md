@@ -7,7 +7,7 @@
 
 ## Running Tests:
 
-- For this assignment, I decided to follow best practices and write some simple unit tests as a means to ensure code quality. I chose to use Vitest along with React Testing Library as these tools due the easy integration in a Vite project.
+- For this assignment, I wanted to show that I am able to follow best practices so I wrote some simple unit tests as a means to ensure code quality. I chose to use Vitest along with React Testing Library as these tools due the easy integration in a Vite project.
 - To run unit tests you will need to use the `npm test` command.
 
 ## General Notes:
