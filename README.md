@@ -1,4 +1,4 @@
-# UI Test
+# UI Assessment
 
 ## Get Started:
 
