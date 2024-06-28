@@ -2,9 +2,10 @@ import { useState } from "react";
 
 interface CheckBoxProps {
   name: string;
+  isDisabled: boolean;
 }
 
-const CheckBox = ({ name }: CheckBoxProps) => {
+const CheckBox = ({ name, isDisabled }: CheckBoxProps) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheck = () => {
@@ -14,6 +15,7 @@ const CheckBox = ({ name }: CheckBoxProps) => {
   return (
     <>
       <input
+        disabled={isDisabled}
         type="checkbox"
         className={isChecked ? "checkbox checked" : "checkbox"}
         id={name}
