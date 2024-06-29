@@ -1,3 +1,4 @@
+import TableHeader from "./TableHeader";
 import TableRow from "./TableRow";
 import { RowProps } from "./TableRow";
 
@@ -10,10 +11,10 @@ const Table = ({ rows }: TableProps) => {
     <table>
       <thead>
         <tr>
-          <th className="table-header">Name</th>
-          <th className="table-header">Device</th>
-          <th className="table-header">Path</th>
-          <th className="table-header">Status</th>
+          <TableHeader header={"Name"} />
+          <TableHeader header={"Device"} />
+          <TableHeader header={"Path"} />
+          <TableHeader header={"Status"} />
         </tr>
       </thead>
       <tbody>
@@ -23,7 +24,6 @@ const Table = ({ rows }: TableProps) => {
             device={row.device}
             path={row.path}
             status={row.status}
-            disableCheck={row.status == "scheduled" ? true : false}
             key={index}
           />
         ))}

@@ -2,14 +2,17 @@ import { useState } from "react";
 
 interface CheckBoxProps {
   name: string;
+  device: string;
   isDisabled: boolean;
+  onCheck: (isChecked: boolean) => void;
 }
 
-const CheckBox = ({ name, isDisabled }: CheckBoxProps) => {
+const CheckBox = ({ name, isDisabled, onCheck }: CheckBoxProps) => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheck = () => {
     setIsChecked(!isChecked);
+    onCheck(!isChecked);
   };
 
   return (
