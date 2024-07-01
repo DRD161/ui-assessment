@@ -14,6 +14,6 @@
 
 - Each component was broken down into smaller, more manageable pieces to reduce complexity and improve reusability.
 
-- In order to ensure accessibility best practices, the table is fully keyboard navigable and passess Lighthouse accessibility checks.
+- In order to ensure accessibility best practices, the table is fully keyboard navigable and passess Lighthouse accessibility checks. The component was also tested using Voice Over to ensure accessibility for users with low to no vision.
 
 - I initially planned on adding unit tests using Vitest and React Testing LIbrary, but given the timeline I had to forgo them. Given more time I would have written tests for the checkboxes, select all and downlaod.
