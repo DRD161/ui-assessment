@@ -24,7 +24,6 @@ const CheckBox = ({ name, isDisabled, onCheck }: CheckBoxProps) => {
         id={name}
         checked={isChecked}
         onChange={handleCheck}
-        aria-label="checkbox"
       />
       <label htmlFor={name}>{name}</label>
     </>
