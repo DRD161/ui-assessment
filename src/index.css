@@ -11,15 +11,26 @@ body {
   width: 100%;
   margin-inline: auto;
   padding-block-start: 10%;
+  font-family: Arial, Helvetica, sans-serif
 }
 
 /* Table styles */
-table {
-  font-family: arial, sans-serif;
-  border-collapse: collapse;
-  width: 100%;
+.data-table {
   border: 1px solid #dddddd;
   box-shadow: 8px 9px 14px -10px rgba(170, 170, 170, 1);
+}
+
+table {
+  border-collapse: collapse;
+  width: 100%;
+  /* border: 1px solid #dddddd;
+  box-shadow: 8px 9px 14px -10px rgba(170, 170, 170, 1); */
+}
+
+.table-header {
+  font-size: 1.2rem;
+  font-weight: 400;
+  padding-block: 1rem;
 }
 
 .table-header:first-of-type {
@@ -29,7 +40,7 @@ table {
 td, th {
   border-bottom: 1px solid #dddddd;
   text-align: left;
-  padding: 8px;
+  padding: .5rem;
 }
 
 .table-row:hover {
@@ -55,8 +66,56 @@ td, th {
 /* Checkbox styles */
 .checkbox {
   margin-inline-end: 2rem;
+  accent-color: #4A96DF;
 }
 
-.checked {
-  accent-color: #4A96DF;
+.checkbox, label:hover {
+  cursor: pointer;
+}
+
+/* Utility bar styles */
+.utility-bar {
+  display: flex;
+  width: 100%;
+  padding: 1rem .5rem;
+  border-bottom: 1px solid #dddddd;
+}
+
+.utility-bar input {
+  margin-inline-end: 1rem;
+}
+
+.selected {
+  display: flex;
+  font-size: 1.5rem;
+}
+
+.selected p {
+  margin-inline-end: .5rem;
+}
+
+.download {
+  display: flex;
+  align-items: center;
+  margin-inline-start: 8rem;
+  background: transparent;
+  font-size: 1.2rem;
+  border: 0;
+  cursor: pointer;
+}
+
+.download img {
+  margin-inline-end: .5rem;
+}
+
+/* Hide select all label but make sure it's usable by screen readers */
+.visually-hidden {
+  border: 0;
+  clip: rect(0 0 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
 }

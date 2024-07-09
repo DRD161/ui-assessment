@@ -1,4 +1,3 @@
-import { useState } from "react";
 import CheckBox from "./CheckBox";
 
 export interface RowProps {
@@ -6,24 +5,34 @@ export interface RowProps {
   device: string;
   path: string;
   status: string;
+  isChecked?: boolean;
+  isDisabled?: boolean;
+  onCheck?: (name: string, path: string, isChecked: boolean) => void;
 }
 
-const TableRow = ({ name, device, path, status }: RowProps) => {
-  const [highlight, setHighlight] = useState(false);
-
-  const applyHighlight = (checked: boolean) => {
-    setHighlight(checked);
+const TableRow = ({
+  name,
+  device,
+  path,
+  status,
+  isChecked = false,
+  isDisabled = false,
+  onCheck = () => {},
+}: RowProps) => {
+  const handleCheck = (isChecked: boolean) => {
+    onCheck(name, path, isChecked);
   };
 
   return (
     <>
-      <tr className={highlight ? "table-row highlight-row" : "table-row"}>
+      <tr className={isChecked ? "table-row highlight-row" : "table-row"}>
         <td>
           <CheckBox
             name={name}
             device={device}
-            isDisabled={status == "scheduled" ? true : false}
-            onCheck={applyHighlight}
+            isChecked={isChecked}
+            isDisabled={isDisabled}
+            onCheck={handleCheck}
           />
         </td>
         <td>{device}</td>
