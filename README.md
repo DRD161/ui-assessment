@@ -16,4 +16,4 @@
 
 - In order to ensure accessibility best practices, the table is fully keyboard navigable and passess Lighthouse accessibility checks. The component was also tested using Voice Over to ensure accessibility for users with low to no vision.
 
-- I initially planned on adding unit tests using Vitest and React Testing LIbrary, but given the timeline I had to forgo them. Given more time I would have written tests for the checkboxes, select all and download. I did, however, spend some of my spare time completing the UI as a means to show the team what a finished product would look like. The complete UI can be found [here](https://github.com/DRD161/ui-assessment/tree/ui-complete).
+- I initially planned on adding unit tests using Vitest and React Testing LIbrary, but given the timeline I had to forgo them. Given more time I would have written tests for the checkboxes, select all and download.
