@@ -97,7 +97,6 @@ const Table = ({ rows }: TableProps) => {
             <TableRow
               key={index}
               {...row}
-              // isChecked={checkedOptions.includes(row.name)}
               isChecked={checkedOptions.some(
                 (option) => option.name === row.name,
               )}
